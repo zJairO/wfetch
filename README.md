@@ -1,3 +1,4 @@
+<p align="center">
 # wfetch
 
 ![](https://repository-images.githubusercontent.com/428005882/dfae335c-e8e6-4af0-9360-5a15b6e86978)
@@ -23,3 +24,4 @@ Please make sure to update tests as appropriate.
 
 ## Buy Me a Coffee
 [Buy Me a Coffe](https://www.buymeacoffee.com/zjairo)
+</p>
