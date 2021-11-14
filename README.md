@@ -8,7 +8,6 @@ wfetch is a Minimal Windows system information tool written in Python
 ```bash
 pip install wfetch
 ```
-For now there is no installation, possibly in the new updates will be necessary to install.
 ## Usage
 ```bash
 python -m wfetch
