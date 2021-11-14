@@ -21,4 +21,4 @@ Please make sure to update tests as appropriate.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Buy Me a Coffee
-[Buy Me a Coffe](https://www.buymeacoffee.com/zjairo)
+<a href="https://www.buymeacoffee.com/zjairo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
