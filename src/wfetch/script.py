@@ -1,5 +1,24 @@
 import os, socket, platform, subprocess, sys, ctypes
-from settings import Computer
+
+class Computer:
+    def __init__(self, user, name, osn, host, version, uptime):
+        self.user = user
+        self.name = name
+        self.osn = osn
+        self.host = host
+        self.version = version
+        self.uptime = uptime
+
+    def ascii(self):
+        return f"""
+########@######## {self.user}@{self.name}
+########@######## host    {self.host}
+########@######## os      {self.osn}
+@@@@@@@@@@@@@@@@@ version {self.version}
+########@######## uptime  {self.uptime}
+########@########
+########@######## 
+"""
 
 def getHost():
     command = "wmic baseboard get product"
@@ -18,4 +37,8 @@ def getUpTime():
 
 win = Computer(os.getlogin(), socket.gethostname(), platform.system() + " " + platform.release(), getHost(), sys.getwindowsversion().build, getUpTime())
 
-print(win.ascii())
+def main():
+    print(win.ascii())
+
+if __name__ == "__main__":
+    main()
