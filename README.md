@@ -1,6 +1,6 @@
 # wfetch
 
-![](https://repository-images.githubusercontent.com/428005882/dfae335c-e8e6-4af0-9360-5a15b6e86978)
+![](https://repository-images.githubusercontent.com/428005882/405f6ef3-9fd9-4ab5-a901-f200fc12031f)
 
 wfetch is a Minimal Windows system information tool written in Python 
 
@@ -10,7 +10,7 @@ pip install wfetch
 ```
 ## Usage
 ```bash
-python -m wfetch
+wfetch
 ```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
