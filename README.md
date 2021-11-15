@@ -10,7 +10,9 @@ First of all have python installed.
 
 https://www.python.org/
 
-Then.
+Then install MesloLGS NF Fonts, I use font size 11.
+
+Use Windows Terminal.
 
 ```bash
 pip install wfetch
