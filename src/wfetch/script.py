@@ -1,4 +1,5 @@
 import os, socket, platform, subprocess, sys, ctypes
+from colorama import Fore
 
 class Computer:
     def __init__(self, user, name, osn, host, version, uptime):
@@ -10,15 +11,18 @@ class Computer:
         self.uptime = uptime
 
     def ascii(self):
-        return f"""
-########@######## {self.user}@{self.name}
-########@######## host    {self.host}
-########@######## os      {self.osn}
-@@@@@@@@@@@@@@@@@ version {self.version}
-########@######## uptime  {self.uptime}
-########@########
-########@######## 
-"""
+        txt = "\n"
+        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + f"{self.user}" + Fore.WHITE + "@" + Fore.CYAN + f"{self.name}" + "\n"
+        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + "host    " + Fore.WHITE + f"{self.host}" + "\n"
+        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + "os      " + Fore.WHITE + f"{self.osn}" + "\n"
+        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + "version " + Fore.WHITE + f"{self.version}" + "\n"
+        txt += "                       " + Fore.BLUE + "uptime  " + Fore.WHITE + f"{self.uptime}" + "\n"
+        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
+        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
+        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
+        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
+        return txt
+        
 
 def getHost():
     command = "wmic baseboard get product"

@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/wfetch/__init__.py
+src/wfetch/script.py
+src/wfetch.egg-info/PKG-INFO
+src/wfetch.egg-info/SOURCES.txt
+src/wfetch.egg-info/dependency_links.txt
+src/wfetch.egg-info/entry_points.txt
+src/wfetch.egg-info/top_level.txt

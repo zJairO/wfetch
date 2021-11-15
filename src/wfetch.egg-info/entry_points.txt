@@ -1,0 +1,3 @@
+[console_scripts]
+wfetch = wfetch.script:main
+
