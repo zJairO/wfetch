@@ -8,6 +8,10 @@ wfetch is a Minimal Windows system information tool written in Python (Only work
 
 First of all have python installed.
 
+https://www.python.org/
+
+After:
+
 ```bash
 pip install wfetch
 ```
