@@ -10,7 +10,7 @@ First of all have python installed.
 
 https://www.python.org/
 
-After:
+Then.
 
 ```bash
 pip install wfetch
