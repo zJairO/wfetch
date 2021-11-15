@@ -2,9 +2,12 @@
 
 ![](https://repository-images.githubusercontent.com/428005882/372e59fc-61bb-4dcb-acfd-44151f830c16)
 
-wfetch is a Minimal Windows system information tool written in Python 
+wfetch is a Minimal Windows system information tool written in Python (Only works on Windows)
 
 ## Installation
+
+First of all have python installed.
+
 ```bash
 pip install wfetch
 ```
@@ -13,8 +16,7 @@ pip install wfetch
 wfetch
 ```
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. (Only works on Windows)
-
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
 
 ## License
