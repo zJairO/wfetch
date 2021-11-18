@@ -1,5 +1,29 @@
-import os, socket, platform, subprocess, sys, ctypes
-from colorama import Fore
+import os, socket, platform, subprocess, sys, ctypes, platform
+from colorama import init
+init()
+from colorama import Fore, Back, Style
+
+uname = platform.uname()
+
+def asciiRet(self):
+    print(Fore.BLUE+"                   .oodMMMMMMMMMMMMM"+Fore.GREEN+f" {self.user}"+Fore.WHITE+" @ "+Fore.GREEN+f"{self.name}")
+    print(Fore.BLUE+"       ..oodMMM  MMMMMMMMMMMMMMMMMMM" +Fore.GREEN+f" Host"+Fore.WHITE+f": {self.host}")
+    print(Fore.BLUE+" oodMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM"+Fore.GREEN+ f" Os" +Fore.WHITE+f": {self.osn}")
+    print(Fore.BLUE+" MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" +Fore.GREEN+f" Version"+Fore.WHITE+f": {self.version}")
+    print(Fore.BLUE+" MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM"+Fore.GREEN+f" Uptime"+Fore.WHITE+f": {self.uptime}")
+    print(Fore.BLUE+" MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM"+Fore.GREEN+" Architecture"+Fore.WHITE+": "+platform.architecture()[0])
+    print(Fore.BLUE+" MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM")#+Fore.GREEN+" Processor"+Fore.WHITE+f": {uname.processor}"
+    print(" MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM")
+    print("""\n MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM
+ MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM
+ MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM
+ MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM
+ MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM
+ `^^^^^^MMMMMMM  MMMMMMMMMMMMMMMMMMM
+       ````^^^^  ^^MMMMMMMMMMMMMMMMM
+                      ````^^^^^^MMMM""")
+
+
 
 class Computer:
     def __init__(self, user, name, osn, host, version, uptime):
@@ -10,19 +34,11 @@ class Computer:
         self.version = version
         self.uptime = uptime
 
+    
+
     def ascii(self):
-        txt = "\n"
-        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + f"{self.user}" + Fore.WHITE + "@" + Fore.CYAN + f"{self.name}" + "\n"
-        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + "host    " + Fore.WHITE + f"{self.host}" + "\n"
-        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + "os      " + Fore.WHITE + f"{self.osn}" + "\n"
-        txt += Fore.BLUE + "########   " + Fore.CYAN + "########" + "    " + Fore.BLUE + "version " + Fore.WHITE + f"{self.version}" + "\n"
-        txt += "                       " + Fore.BLUE + "uptime  " + Fore.WHITE + f"{self.uptime}" + "\n"
-        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
-        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
-        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
-        txt += Fore.LIGHTBLUE_EX + "########   " + Fore.BLUE + "########" + "\n"
-        return txt
-        
+        return asciiRet(self)
+    
 
 def getHost():
     command = "wmic baseboard get product"
@@ -46,3 +62,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
